@@ -38,12 +38,15 @@ void main() {
   int lapsToComplete = 10;
   bool isMonday = true;
 
-  if (!isMonday) {
+  if (isMonday == false) {
     print("It's not monday!.");
     for (int lap = 1; lap <= lapsToComplete; lap=lap+1) {
       print('Coach screams: $lap out of $lapsToComplete!');
     }
   } else {
     print("It's monday!.");
+    for (int lap = 10; lap >= 0; lap--){
+      print('Coach yells: $lap more laps to complete!');
+    }
   }
 }

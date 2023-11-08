@@ -13,11 +13,28 @@
 
  */
 
+// import 'dart:io';
+//
+// void main() {
+//   print('What should we countdown from?');
+//   int countDown = int.parse(stdin.readLineSync());
+//
+//   while (countDown >= 0) {
+//     print(countDown);
+//     countDown = countDown - 1;
+//     if (countDown < 0) {
+//       break;
+//     }
+//   }
+//   print("This is it, this is the countdown to extinction");
+// }
+
+
 import 'dart:io';
 
 void main() {
   print('What should we countdown from?');
-  int countDown = int.parse(stdin.readLineSync());
+  int countDown = int.parse(stdin.readLineSync()!);
 
   while (countDown >= 0) {
     print(countDown);

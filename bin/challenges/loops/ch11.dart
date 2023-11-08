@@ -14,12 +14,12 @@ import 'dart:io';
 void main() {
 
   // Yuck, old nasty way
-  print('Choose an operation');
-  print('[0]: Add');
-  print('[1]: Subtract');
-  print('[2]: Multiply');
-  print('[3]: Divide');
-  print('[4]: Modulo');
+  // print('Choose an operation');
+  // print('[0]: Add');
+  // print('[1]: Subtract');
+  // print('[2]: Multiply');
+  // print('[3]: Divide');
+  // print('[4]: Modulo');
 
   // Yay for better way!
   List<String> operations = ['Add', 'Subtract', 'Multiply', 'Divide', 'Modulo'];
@@ -27,5 +27,10 @@ void main() {
 
   print('Choose an operation');
   // For loop starts here.
+  for (String item in operations){
+    print('[$opNbr]:$item');
+    opNbr++;
+
+  }
 
 }

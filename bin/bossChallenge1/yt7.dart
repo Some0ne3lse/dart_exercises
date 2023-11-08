@@ -43,5 +43,42 @@
 import 'dart:io';
 
 void main() {
+  print('When were you born?');
+  String yearBorn = nullEscapeFromString();
 
+  bool condition1;
+  int? decade;
+  bool condition2;
+
+  int yearNumberLength = yearBorn.length;
+
+  condition1 = yearNumberLength == 4;
+  // print(condition1);
+
+  String firstTwoNumbersSt = yearBorn.substring(0,2);
+  decade = int.tryParse(firstTwoNumbersSt);
+
+  if (decade == 19 || decade == 20){
+    condition2 = true;
+  } else {
+    condition2 = false;
+  }
+
+  print('Year: $yearBorn');
+  print('Length is 4: $condition1');
+  print('Decade: $decade');
+  print('Decade is valid: $condition2');
+
+}
+
+
+String nullEscapeFromString(){
+  String? sentence;
+  while (sentence == null) {
+    sentence = stdin.readLineSync();
+    if (sentence == null) {
+      print("Invalid option");
+    }
+  }
+  return sentence;
 }

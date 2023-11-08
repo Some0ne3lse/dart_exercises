@@ -32,5 +32,38 @@
 import 'dart:io';
 
 void main() {
+  bool userCheck = true;
 
+  while(userCheck == true){
+    print('Please enter the number 100');
+
+    int userNumber = nullEscapeAndConvertToInt();
+
+    if (userNumber == 100){
+      print('Good job, you entered 100');
+      userCheck = false;
+    } else {
+      print('You are a bad user!');
+    }
+  }
+}
+
+int nullEscapeAndConvertToInt() {
+  String? number;
+  int? parsedNumber;
+
+  while (parsedNumber == null) {
+    print("Please enter a valid number: ");
+    number = stdin.readLineSync();
+
+    if (number != null) {
+      parsedNumber = int.tryParse(number);
+    }
+
+    if (parsedNumber == null) {
+      print("Invalid option");
+    }
+  }
+
+  return parsedNumber;
 }
